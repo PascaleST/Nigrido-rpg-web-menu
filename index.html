@@ -3,14 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <title>Nigrido</title>
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: black;
+    }
+
+    /* CONTENEDOR PRINCIPAL DE LA ESCENA */
+    #escena {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    /* CIELO */
+    #cielo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("assets/img/cielo.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+      z-index: 0;
+    }
+
+    /* MONTAÑAS */
+    #montanas {
+      position: absolute;
+      bottom: 25%;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    #montanas img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* SUELO */
+    #suelo {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+    }
+
+    #suelo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+  </style>
 </head>
 <body>
 
-  <div class="escena">
-    <img src="img/cielo.png" class="cielo">
-    <img src="img/montanas.png" class="montanas">
-    <img src="img/suelo.png" class="suelo">
+  <div id="escena">
+
+    <div id="cielo"></div>
+
+    <div id="montanas">
+      <img src="assets/img/montanas.png" alt="Montañas" />
+    </div>
+
+    <div id="suelo">
+      <img src="assets/img/suelo.png" alt="Suelo" />
+    </div>
+
   </div>
 
 </body>
