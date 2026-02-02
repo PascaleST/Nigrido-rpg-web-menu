@@ -4,7 +4,7 @@ body {
   overflow: hidden;
 }
 
-.escena {
+#escena {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -13,24 +13,21 @@ body {
 /* CIELO */
 .cielo {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-  image-rendering: pixelated;
+  background: url("../assets/img/cielo.png") no-repeat center;
+  background-size: cover;
   z-index: 1;
 }
 
 /* MONTAÑAS */
 .montanas {
   position: absolute;
-  bottom: 220px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 200px;
-  image-rendering: pixelated;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  background: url("../assets/img/montañas.png") no-repeat center bottom;
+  background-size: contain;
   z-index: 2;
 }
 
@@ -38,10 +35,11 @@ body {
 .suelo {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 220px;
-  image-rendering: pixelated;
+  width: 100%;
+  height: 30%;
+  background: url("../assets/img/suelo.png") no-repeat center bottom;
+  background-size: contain;
   z-index: 3;
 }
+
 
