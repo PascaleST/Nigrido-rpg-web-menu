@@ -53,11 +53,10 @@ body {
 /* CASA */ 
 #casa {
   position: absolute;
-  bottom: 140px; 
-  left: 50%;
-  transform: translateX(-50%);
-  width: 320px; 
-  z-index: 2;
+  bottom: 200px;       
+  left: 15%;            
+  width: 300px;        
+  z-index: 4;           
 }
 
 #casa img {
