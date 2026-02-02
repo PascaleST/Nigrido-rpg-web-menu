@@ -29,7 +29,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-  z-index: 0;
+  z-index: -1;
 }
 
 /* MONTAÑAS */
@@ -45,7 +45,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  transform: scale(0.92);   /* 👈 clave */
+  transform: scale(0.92);  
   transform-origin: bottom center;
   filter: brightness(0.94) saturate(0.95);
 }
@@ -53,10 +53,10 @@ body {
 /* CASA */ 
 #casa {
   position: absolute;
-  bottom: 140px; /* un poco sobre el suelo */
+  bottom: 140px; 
   left: 50%;
   transform: translateX(-50%);
-  width: 320px; /* ajustable */
+  width: 320px; 
   z-index: 2;
 }
 
