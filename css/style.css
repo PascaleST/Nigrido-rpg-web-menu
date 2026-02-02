@@ -36,7 +36,7 @@ body {
 /* MONTAÑAS */
 #montanas {
   position: absolute;
-  bottom: 30%; /* antes 25% */
+  bottom: 260px;
   left: 0;
   width: 100%;
   z-index: 1;
