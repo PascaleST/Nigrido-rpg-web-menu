@@ -42,11 +42,6 @@ body {
   z-index: 1;
 }
 
-#montanas img {
-  width: 100%;
-  transform: translateY(-120px); /* sube la imagen dentro */
-}
-
 /* SUELO */
 #suelo {
   position: absolute;
