@@ -46,7 +46,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  transform: scale(0.9);   /* 👈 clave */
+  transform: scale(0.92);   /* 👈 clave */
   transform-origin: bottom center;
   filter: brightness(0.94) saturate(0.95);
 }
