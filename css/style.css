@@ -58,7 +58,6 @@ body {
   transform: translateX(-50%);
   width: 320px; /* ajustable */
   z-index: 2;
-  pointer-events: none;
 }
 
 #casa img {
