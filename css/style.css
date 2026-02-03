@@ -81,4 +81,36 @@ body {
   display: block;
 }
 
+/* 🔥 FOGATA */
+#fogata {
+  position: absolute;
+  bottom: 140px;              
+  left: 50%;
+  width: 128px;
+  height: 128px;
+  transform: translateX(-50%);
+  background-image: url("../assets/img/fogata.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  animation:
+    fuego 1s steps(6) infinite,
+    pulso 2.5s ease-in-out infinite;
+  z-index: 5;
+}
+
+/* ANIMACIÓN FUEGO */
+@keyframes fuego {
+  from { background-position: 0 0; }
+  to   { background-position: -768px 0; } /* 128 x 6 frames */
+}
+
+/* PULSO SUTIL */
+@keyframes pulso {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+}
 
