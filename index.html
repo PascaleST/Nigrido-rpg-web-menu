@@ -88,34 +88,29 @@
 
      /* 🔥 FOGATA */
     #fogata {
-      position: absolute;
-      bottom: 130px;               
-      left: 50%;
-      width: 128px;                
-      height: 128px;
-      transform: translateX(-50%);
-      background-image: url("assets/img/fogata.png");
-      background-repeat: no-repeat;
-      background-size: auto 100%;
-      animation:
-        fuego 1s steps(6) infinite,
-        pulso 2.5s ease-in-out infinite;
-      z-index: 5;
-    }
+  position: absolute;
+  bottom: 120px;      /* ajustable */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;       /* 👈 MÁS GRANDE */
+  height: 200px;
+  z-index: 5;
+  pointer-events: none;
+}
 
+    #fogata .fuego {
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/img/fogata.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  animation: fuego 1s steps(6) infinite;
+}
+    
     @keyframes fuego {
-      from { background-position: 0 0; }
-      to   { background-position: -768px 0; } /* 128 x 6 */
-    }
-
-    @keyframes pulso {
-      0%, 100% {
-        transform: translateX(-50%) scale(1);
-      }
-      50% {
-        transform: translateX(-50%) scale(1.05);
-      }
-    }
+  from { background-position: 0 0; }
+  to   { background-position: -1200px 0; } /* 200 x 6 */
+}
 
   </style>
 </head>
@@ -123,7 +118,9 @@
 
   <div id="escena">
 
-    <div id="fogata"></div>
+    <div id="fogata">
+  <div class="fuego"></div>
+</div>
     
     <div id="casa">
       <img src="assets/img/casa.png" alt="Casa">
