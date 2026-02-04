@@ -130,21 +130,6 @@
   </style>
 </head>
   
-  <script>
-  const piedra = document.getElementById("piedra");
-  let abierta = false;
-
-  piedra.addEventListener("click", () => {
-    if (!abierta) {
-      piedra.style.backgroundPosition = "-140px 0";
-      abierta = true;
-    } else {
-      piedra.style.backgroundPosition = "0 0";
-      abierta = false;
-    }
-  });
-</script>
-
 <body>
 
   <div id="escena">
@@ -170,6 +155,21 @@
     </div>
 
   </div>
+
+   <script>
+    const piedra = document.getElementById("piedra");
+    let abierta = false;
+
+    piedra.addEventListener("click", () => {
+      if (!abierta) {
+        piedra.style.backgroundPosition = "-140px 0";
+        abierta = true;
+      } else {
+        piedra.style.backgroundPosition = "0 0";
+        abierta = false;
+      }
+    });
+  </script>
 
 </body>
 </html>
