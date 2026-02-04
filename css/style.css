@@ -37,7 +37,7 @@ body {
 /* MONTAÑAS */
 #montanas {
   position: absolute;
-  bottom: 300px;
+  bottom: 250px;
   left: 0;
   width: 100%;
   z-index: 1;
@@ -47,7 +47,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  transform: scale(0.9);  
+  transform: scale(1.0);  
   transform-origin: bottom center;
   filter: brightness(0.94) saturate(0.95);
 }
