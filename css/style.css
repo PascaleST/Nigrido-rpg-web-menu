@@ -24,7 +24,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("assets/img/cielo.png");
+  background-image: url("../assets/img/cielo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -56,7 +56,7 @@ body {
      left: 89%;             
      width: 140px;           
      height: 94px;
-     background-image: url("assets/img/piedra.png");
+     background-image: url("../assets/img/piedra.png");
      background-repeat: no-repeat;
      background-size: 280px 94px;
      background-position: 0 0;
@@ -73,7 +73,7 @@ body {
     width: 192px;
     height: 160px;
 
-    background-image: url("assets/img/arania_base.png");
+    background-image: url("../assets/img/arania_base.png");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -129,7 +129,7 @@ body {
     #fogata .fuego {
   width: 100%;
   height: 100%;
-  background-image: url("assets/img/fogata.png");
+  background-image: url("../assets/img/fogata.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   animation: fuego 1s steps(6) infinite;
