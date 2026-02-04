@@ -15,7 +15,10 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  transform: scale(1.15);
+  transform-origin: center bottom;
 }
+
 
 /* CIELO */
 #cielo {
@@ -28,7 +31,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-  z-index: -1;
+  z-index: 0;
+}
+
 }
 
 /* MONTAÑAS */
@@ -79,7 +84,7 @@ body {
 
     opacity: 0;             /* empieza oculta */
     pointer-events: none;   /* no clickeable */
-    z-index: 5;             /* sobre la piedra */
+    z-index: 6;             /* sobre la piedra */
    }
 
 
