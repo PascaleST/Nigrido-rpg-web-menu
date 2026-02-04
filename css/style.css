@@ -52,10 +52,13 @@ body {
 
  /* PIEDRA */
     #piedra {
+  outline: 2px solid red;
+}
+
      position: absolute;
-     bottom: 140px;          /* ajústalo a tu escena */
-     left: 87%;              /* centro-ish */
-     width: 140px;           /* 1 frame */
+     bottom: 140px;          
+     left: 87%;             
+     width: 140px;           
      height: 94px;
      background-image: url("assets/img/piedra.png");
      background-repeat: no-repeat;
