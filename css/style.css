@@ -50,6 +50,22 @@ body {
   filter: brightness(0.94) saturate(0.95);
 }
 
+ /* PIEDRA */
+    #piedra {
+     position: absolute;
+     bottom: 120px;          /* ajústalo a tu escena */
+     left: 45%;              /* centro-ish */
+     width: 192px;           /* 1 frame */
+     height: 128px;
+     background-image: url("assets/img/piedra.png");
+     background-repeat: no-repeat;
+     background-position: 0 0;
+     cursor: pointer;
+     z-index: 4;
+
+    image-rendering: pixelated; /* si es pixel art */
+   }
+
 /* SUELO */
 #suelo {
   position: absolute;
