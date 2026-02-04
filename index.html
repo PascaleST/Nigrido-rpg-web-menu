@@ -57,12 +57,13 @@
 
     #piedra {
      position: absolute;
-     bottom: 120px;          /* ajústalo a tu escena */
-     left: 80%;              /* centro-ish */
-     width: 192px;           /* 1 frame */
-     height: 128px;
+     bottom: 140px;          /* ajústalo a tu escena */
+     left: 90%;              /* centro-ish */
+     width: 140px;           /* 1 frame */
+     height: 94px;
      background-image: url("assets/img/piedra.png");
      background-repeat: no-repeat;
+     background-size: 280px 94px;
      background-position: 0 0;
      cursor: pointer;
      z-index: 4;
@@ -135,16 +136,13 @@
 
   piedra.addEventListener("click", () => {
     if (!abierta) {
-      // Mostrar frame 2 (piedra levantada)
-      piedra.style.backgroundPosition = "-192px 0";
+      piedra.style.backgroundPosition = "-140px 0";
       abierta = true;
     } else {
-      // Volver a frame 1 (piedra normal)
       piedra.style.backgroundPosition = "0 0";
       abierta = false;
     }
   });
-    
 </script>
 
 <body>
