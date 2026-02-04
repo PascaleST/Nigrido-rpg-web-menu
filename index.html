@@ -53,7 +53,9 @@
       width: 100%;
       height: auto;
       display: block;
-    }
+    } 
+
+   
 
     /* SUELO */
     #suelo {
@@ -114,6 +116,24 @@
 
   </style>
 </head>
+  
+  <script>
+  const piedra = document.getElementById("piedra");
+  let abierta = false;
+
+  piedra.addEventListener("click", () => {
+    if (!abierta) {
+      // Mostrar frame 2 (piedra levantada)
+      piedra.style.backgroundPosition = "-192px 0";
+      abierta = true;
+    } else {
+      // Volver a frame 1 (piedra normal)
+      piedra.style.backgroundPosition = "0 0";
+      abierta = false;
+    }
+  });
+</script>
+
 <body>
 
   <div id="escena">
@@ -131,6 +151,8 @@
     <div id="montanas">
       <img src="assets/img/montanas.png" alt="Montañas" />
     </div>
+
+    <div id="piedra"></div>
 
     <div id="suelo">
       <img src="assets/img/suelo.png" alt="Suelo" />
