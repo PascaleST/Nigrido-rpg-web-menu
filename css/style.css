@@ -42,8 +42,8 @@ body {
 
   background-image: url("../assets/img/montanas.png");
   background-repeat: no-repeat;
-  background-size: 130% auto;
-  
+  background-size: 110% auto;
+
   background-position: center bottom;
 
   filter: brightness(0.9) saturate(0.85);
