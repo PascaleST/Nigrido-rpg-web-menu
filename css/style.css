@@ -15,8 +15,6 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  transform: scale(1.15);
-  transform-origin: center bottom;
 }
 
 
@@ -39,7 +37,7 @@ body {
 /* MONTAÑAS */
 #montanas {
   position: absolute;
-  bottom: 350px;
+  bottom: 300px;
   left: 0;
   width: 100%;
   z-index: 1;
@@ -49,7 +47,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  transform: scale(0.92);  
+  transform: scale(0.9);  
   transform-origin: bottom center;
   filter: brightness(0.94) saturate(0.95);
 }
@@ -107,9 +105,9 @@ body {
 #casa {
   position: absolute;
   bottom: 220px;       
-  right: 3%;       
+  right: 6%;       
   left: auto;           
-  width: 460px;        
+  width: 420px;        
   z-index: 4;           
 }
 
