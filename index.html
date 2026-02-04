@@ -159,19 +159,42 @@
   </div>
 
    <script>
+  document.addEventListener("DOMContentLoaded", () => {
     const piedra = document.getElementById("piedra");
+    const arania = document.getElementById("arania");
+
+    let clicks = 0;
     let abierta = false;
 
     piedra.addEventListener("click", () => {
-      if (!abierta) {
-        piedra.style.backgroundPosition = "-140px 0";
-        abierta = true;
-      } else {
-        piedra.style.backgroundPosition = "0 0";
-        abierta = false;
+      clicks++;
+
+      // abrir/cerrar piedra
+      abierta = !abierta;
+      piedra.style.backgroundPosition = abierta ? "-140px 0" : "0 0";
+
+      // estados por click
+      if (clicks === 1 && abierta) {
+        // 1ª vez: ritual completo
+        arania.style.backgroundImage = 'url("assets/img/arania_ritual.png")';
+        arania.style.opacity = 1;
       }
+
+      if (clicks === 2 && abierta) {
+        // 2ª vez: cansada / disgusto
+        arania.style.backgroundImage = 'url("assets/img/arania_base.png")';
+        arania.style.opacity = 1;
+      }
+
+      if (clicks === 3) {
+        // 3ª vez: ocultar (cartel después)
+        arania.style.opacity = 0;
+      }
+
+      // 4ª vez: no pasa nada visual (ruido luego)
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
