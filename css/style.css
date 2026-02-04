@@ -35,9 +35,9 @@ body {
 /* MONTAÑAS */
 #montanas {
   position: absolute;
-  bottom: 280px;
+  bottom: 220px;
   left: 0;
-  width: 100%;
+  width: 90%;
   height: 260px;
 
   background-image: url("../assets/img/montanas.png");
