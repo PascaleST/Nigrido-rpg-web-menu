@@ -64,6 +64,25 @@ body {
      cursor: pointer;
      z-index: 4;
    }
+ /* 🕷️ ARAÑA */
+   #arania {
+    position: absolute;
+    bottom: 110px;          /* AJUSTA para que salga del hueco */
+    left: 89%;              /* MISMO left que la piedra */
+    transform: translateX(-50%);
+
+    width: 192px;
+    height: 160px;
+
+    background-image: url("assets/img/arania_base.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    opacity: 0;             /* empieza oculta */
+    pointer-events: none;   /* no clickeable */
+    z-index: 5;             /* sobre la piedra */
+   }
+
 
 /* SUELO */
 #suelo {
