@@ -37,18 +37,18 @@ body {
 /* MONTAÑAS */
 #montanas {
   position: absolute;
-  bottom: 200px;
+  bottom: 220px;
   left: 0;
   width: 100%;
-  z-index: 1;
+  height: 260px;      
+  overflow: hidden;  
+  z-index: 1;;
 }
 
 #montanas img {
   width: 100%;
   height: auto;
   display: block;
-  transform: scale(1.0);  
-  transform-origin: bottom center;
   filter: brightness(0.94) saturate(0.95);
 }
 
