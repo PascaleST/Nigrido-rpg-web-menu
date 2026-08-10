@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nigrido</title>
-
   <link rel="stylesheet" href="css/style.css">
 </head>
   
@@ -11,65 +11,76 @@
 
   <div id="escena">
 
-    <div id="fogata">
-  <div class="fuego"></div>
-</div>
+    <div id="fogata" aria-hidden="true">
+      <span class="fuego"></span>
+    </div>
     
     <div id="casa">
-      <img src="assets/img/casa.png" alt="Casa">
+      <img src="assets/img/casa.png" alt="Casa" data-i18n-alt="houseAlt">
     </div>
 
     <div id="cielo"></div>
 
     <div id="montanas"></div>
 
-    <div id="piedra"></div>
+    <button
+      id="piedra"
+      type="button"
+      aria-label="Abrir selector de idioma"
+      aria-controls="menu-idiomas arania"
+      aria-haspopup="menu"
+      aria-expanded="false"
+    ></button>
 
-    <div id="arania"></div>
+    <div id="menu-idiomas" class="menu-idiomas" role="menu" hidden>
+      <p data-i18n="languageTitle">Idioma</p>
+      <div class="opciones-idioma">
+        <button type="button" role="menuitemradio" data-idioma="es">Español</button>
+        <button type="button" role="menuitemradio" data-idioma="en">English</button>
+        <button type="button" role="menuitemradio" data-idioma="de">Deutsch</button>
+        <button type="button" role="menuitemradio" data-idioma="ja">日本語</button>
+      </div>
+    </div>
+
+    <section id="tablon-banda" class="tablon-banda" aria-label="Navegación principal de Nigrido">
+      <div class="tablon-contenido">
+        <div class="carteles-banda">
+          <button class="cartel cartel-musica" type="button" data-seccion="music"><span aria-hidden="true">♫</span><strong data-i18n="musicPoster">Música</strong></button>
+          <button class="cartel cartel-videos" type="button" data-seccion="videos"><span aria-hidden="true">▶</span><strong data-i18n="videosPoster">Videos</strong></button>
+          <button class="cartel cartel-biografia" type="button" data-seccion="biography"><span aria-hidden="true">✦</span><strong data-i18n="biographyPoster">Biografía</strong></button>
+          <button class="cartel cartel-fechas" type="button" data-seccion="dates"><span aria-hidden="true">◆</span><strong data-i18n="datesPoster">Fechas</strong></button>
+          <button class="cartel cartel-galeria" type="button" data-seccion="gallery"><span aria-hidden="true">▣</span><strong data-i18n="galleryPoster">Galería</strong></button>
+          <button class="cartel cartel-contacto" type="button" data-seccion="contact"><span aria-hidden="true">✉</span><strong data-i18n="contactPoster">Contacto</strong></button>
+        </div>
+      </div>
+    </section>
+
+    <div id="fondo-ficha" class="fondo-ficha" hidden></div>
+    <section id="ficha-banda" class="ficha-banda" role="dialog" aria-modal="true" aria-labelledby="ficha-titulo" hidden>
+      <button id="cerrar-ficha" class="cerrar-ficha" type="button" aria-label="Cerrar">×</button>
+      <p class="ficha-sello" data-i18n="boardKicker">Archivo oficial</p>
+      <h2 id="ficha-titulo"></h2>
+      <p id="ficha-contenido" class="ficha-contenido"></p>
+      <p class="ficha-proximamente" data-i18n="contentSoon">Contenido en preparación.</p>
+    </section>
+
+    <button
+      id="arania"
+      type="button"
+      aria-label="Ocultar la araña"
+      aria-hidden="true"
+      tabindex="-1"
+    ></button>
+
+    <p id="estado-arania" class="solo-lectores" aria-live="polite"></p>
 
     <div id="suelo">
-      <img src="assets/img/suelo.png" alt="Suelo" />
+      <img src="assets/img/suelo.png" alt="Suelo" data-i18n-alt="groundAlt" />
     </div>
 
   </div>
 
-   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const piedra = document.getElementById("piedra");
-    const arania = document.getElementById("arania");
-
-    let clicks = 0;
-    let abierta = false;
-
-    piedra.addEventListener("click", () => {
-      clicks++;
-
-      // abrir/cerrar piedra
-      abierta = !abierta;
-      piedra.style.backgroundPosition = abierta ? "-140px 0" : "0 0";
-
-      // estados por click
-      if (clicks === 1 && abierta) {
-        // 1ª vez: ritual completo
-        arania.style.backgroundImage = 'url("assets/img/arania_ritual.png")';
-        arania.style.opacity = 1;
-      }
-
-      if (clicks === 2 && abierta) {
-        // 2ª vez: cansada / disgusto
-        arania.style.backgroundImage = 'url("assets/img/arania_base.png")';
-        arania.style.opacity = 1;
-      }
-
-      if (clicks === 3) {
-        // 3ª vez: ocultar (cartel después)
-        arania.style.opacity = 0;
-      }
-
-      // 4ª vez: no pasa nada visual (ruido luego)
-    });
-  });
-</script>
+  <script src="js/app.js"></script>
 
 </body>
 </html>
